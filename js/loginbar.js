@@ -3,7 +3,7 @@ $(".top-user").hover(function(){
     $(".top-user-show").css({display:"block",left:"466px"});
 },function(){
     $(".top-user-show").css("display","none");
-    $(".top-user").removeClass("cur")
+    $(".top-user").removeClass("cur");
 });
 /*****************/
 $(".top-app").hover(function(){
@@ -11,7 +11,7 @@ $(".top-app").hover(function(){
     $(".top-app-show").css({display:"block",left:"562px"});
 },function(){
     $(".top-app-show").css("display","none");
-    $(".top-app").removeClass("cur")
+    $(".top-app").removeClass("cur");
 })
 /*****************/
 $(".top-sitemap").hover(function(){
@@ -19,7 +19,7 @@ $(".top-sitemap").hover(function(){
     $(".top-sitemap-show").css({display:"block"});
 },function(){
     $(".top-sitemap-show").css("display","none");
-    $(".top-sitemap").removeClass("cur")
+    $(".top-sitemap").removeClass("cur");
 })
 /****************/
 $(".top-telephone").hover(function(){
@@ -27,5 +27,5 @@ $(".top-telephone").hover(function(){
     $(".top-free-phone").css({display:"block",left:"1053px"});
 },function(){
     $(".top-free-phone").css("display","none");
-    $(".top-telephone").removeClass("cur")
+    $(".top-telephone").removeClass("cur");
 })
