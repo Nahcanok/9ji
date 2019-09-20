@@ -71,7 +71,7 @@
                     <dl>
                         <dt><i>*</i>用户名</dt>
                         <dd>
-                            <input type="text" id="userUID" onblur=" CheckUser() " /><em>4-16位字母、数字或汉字，请不要输入特殊字符！</em>
+                            <input type="text" id="userUID" /><em>4-16位字母、数字或汉字，请不要输入特殊字符！</em>
                         </dd>
                     </dl>
                     <dl>
@@ -97,8 +97,7 @@
                     <dl>
                         <dt><i>*</i>短信验证码</dt>
                         <dd>
-                            <input type="text" id="phonecode2" style="width: 120px;" /><a class="btn" id="getCode2"
-                                href="javascript:countDown2();">
+                            <input type="text" id="phonecode2" style="width: 120px;" /><em></em><a class="btn" id="getCode2">
                                 <span id="dyMobileButton2">获取短信验证码</span></a>
                         </dd>
                     </dl>
@@ -113,13 +112,13 @@
                     <dl>
                         <dt></dt>
                         <dd>
-                            <button onclick=" Register2() " id="regbut2">提交注册</button></dd>
+                            <button id="regbut2">提交注册</button></dd>
                     </dl>
                 </div>
             </div>
         </div>
     </div>
-
+    <script src="../js/captcha.min.js"></script>
     <script src="../js/reg.js"></script>
 </body>
 
