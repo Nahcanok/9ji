@@ -5,16 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <!-- <link rel="stylesheet" href="../css/newindex.css"> -->
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/jquery-3.4.1.js"></script>
 </head>
-<body>
+<body style="background: #f7f7f7">
     <script>
-    $("body").append("<div class=\"top\"></div>")
-    $(".top").load("http://127.0.0.1/9jiji/9ji/html/loginbar.html")
+    $("body").append("<div class=\"top\"></div><div class=\"Main\"></div>");
+    $(".top").load("http://127.0.0.1/9jiji/9ji/html/loginbar.html");
+    $(".Main").load("http://127.0.0.1/9jiji/9ji/html/header.html");
+    $("body").append("<div class=\"homebox\"></div>");
+    $(".homebox").load("http://127.0.0.1/9jiji/9ji/html/floor.html")
     $("body").append("<div class=\"footer\"></div>");
     $(".footer").load("http://127.0.0.1/9jiji/9ji/html/footer.html");
-    // directives
+    $(".footer").before("<div class=\"tool-bar flex flex-align-center\" style=\"width:35px\">");
+    $(".tool-bar").load("http://127.0.0.1/9jiji/9ji/html/ce.html")
     </script>
+    <script src="../js/index.js"></script>
 </body>
 </html>

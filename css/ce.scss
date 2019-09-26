@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+img{
+    vertical-align: top;
+}
+.tool-bar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #333;
+    z-index: 79;
+    transition: width .3s ease;
+    .tool-wechat{
+        span{
+            width: 100px;
+        height: 100px;
+        }
+    }
+    .tool-top{
+        position: absolute;
+    left: 0;
+    bottom: 0;
+    }
+    a {
+        display: flex;
+        width: 35px;
+        height: 35px;
+        position: relative;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+
+        &:hover {
+            background: #c80f1e;
+
+            span {
+                right: 35px;
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        .fa-icon {
+            display: inline-block;
+            fill: currentColor;
+        }
+
+        span {
+            position: absolute;
+            right: 45px;
+            top: 0;
+            height: 35px;
+            display: block;
+            opacity: 0;
+            background: #333;
+            width: 70px;
+            text-align: center;
+            transition: all .3s ease;
+            line-height: 35px;
+            visibility: hidden;
+
+            &::after {
+                content: "";
+                border-top: 5px solid transparent;
+                border-left: 5px solid #333;
+                border-bottom: 5px solid transparent;
+                position: absolute;
+                right: -5px;
+                top: 13px;
+            }
+        }
+    }
+}

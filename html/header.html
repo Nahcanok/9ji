@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="../css/main.css">
+<script src="../js/jquery-3.4.1.js"></script>
+
+
+
+<body>
+    <div class="header">
+        <div class="wrapper">
+            <div class="logo-box left relative">
+                <h1 class="logo left">
+                    <a href="" title="九机网">
+                        <img src="../img/logo.png" width="100" height="50" alt="九机网">
+                    </a>
+                </h1>
+            </div>
+            <div class="search left">
+                <form action="/search" method="get" class="search-form">
+                    <input class="search-box" name="w" type="text" id="searchbox" placeholder="5G手机" value=""
+                        autocomplete="off" x-webkit-speech="" x-webkit-grammar="builtin:translate" maxlength="50"><input
+                        type="hidden" value="" name="pId">
+                    <input type="hidden" value="ASP.index_aspx">
+                    <input name="" type="submit" class="search-btn" value="搜索">
+                </form>
+                <p> 热门搜索：
+                    <a href="/search?w=华为 Mate 30">华为 Mate 30</a>
+                    <a href="/search?w=iPhone 11">iPhone 11</a>
+                    <a href="/search?w=vivo NEX 3 5G">vivo NEX 3 5G</a>
+                    <a href="/search?w=iQOO Pro 5G">iQOO Pro 5G</a>
+                    <a href="/search?w=三星 Note 10">三星 Note 10</a>
+                    <a href="/search?w=荣耀 20S">荣耀 20S</a>
+                    <a href="/search?w=5G手机">5G手机</a>
+                </p>
+            </div>
+            <div class="header-qrcode right">
+                <style>
+                    .header-cart {
+                        width: 160px;
+                        margin-top: 25px;
+                        float: right;
+                        position: relative;
+                    }
+
+                    .header-cart a {
+                        background: #fff;
+                        border: solid 1px #dfdfdf;
+                        text-align: center;
+                        height: 38px;
+                        line-height: 38px;
+                        display: block;
+                        text-decoration: none;
+                        position: relative;
+                        z-index: 95;
+                    }
+
+                    .header-cart a.cur {
+                        color: #f21c1c;
+                        border-bottom: 0;
+                    }
+
+                    .header-cart a:hover svg,
+                    .header-cart a.cur svg {
+                        fill: #f21c1c;
+                    }
+
+                    .header-cart a span {
+                        display: none;
+                        padding: 0 3px;
+                        background: #f21c1c;
+                        color: #fff;
+                        height: 14px;
+                        line-height: 14px;
+                        border-radius: 14px;
+                    }
+
+                    .header-cart-box {
+                        width: 300px;
+                        height: 500px;
+                        background: #fff;
+                        position: absolute;
+                        top: 37px;
+                        right: 0;
+                        z-index: 94;
+                        border: solid 1px #dfdfdf;
+                        display: none;
+                    }
+
+                    .header-cart-box iframe {
+                        border: 0;
+                        height: 100%;
+                    }
+                </style>
+                <div class="header-cart">
+                    <a href="/trade/cart" class="header-cart-a">
+                        <svg version="1.1" role="presentation" width="16" height="14.222222222222221"
+                            viewBox="0 0 576 512" class="fa-icon" style="vertical-align:text-top;">
+                            <path
+                                d="M528.1 301.3L575.4 93.3C578.8 78.3 567.4 64 552 64H159.2L150 19.2C147.8 8 137.9 0 126.5 0H24C10.7 0 0 10.7 0 24V40C0 53.3 10.7 64 24 64H93.9L164.1 407.4C147.3 417.1 136 435.2 136 456 136 486.9 161.1 512 192 512S248 486.9 248 456C248 440.3 241.6 426.2 231.2 416H440.8C430.4 426.2 424 440.3 424 456 424 486.9 449.1 512 480 512S536 486.9 536 456C536 433.8 523.1 414.7 504.4 405.6L509.9 381.3C513.4 366.3 501.9 352 486.5 352H218.1L211.6 320H504.7C515.9 320 525.6 312.2 528.1 301.3z">
+                            </path>
+                        </svg>
+                        购物车
+                        <span style="display: inline-block;">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navigation">
+        <div class="wrapper relative">
+            <h3 class="nav-menu-cursor">全部商品分类</h3>
+            <div class="nav-menu" style="display:block;">
+                <dl>
+                    <dt>
+                        <b>
+                            <i class="icon m2"></i>
+                            <a href="#">手机通讯</a>
+                            <s class="fr">></s>
+                        </b>
+                        <span>
+                            <a href="">5G手机</a>
+                            <a href="">三星 Note 10+</a>
+                            <a href="">华为 P30</a>
+                            <a href="">华为 Mate 20</a>
+                            <a href="">iPhone XR</a>
+                        </span>
+                    </dt>
+                    <dd>
+                        <div class="left">
+                            <div class="nav-menu-item">
+                                <h4 class="orange">热门品牌</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">价位</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">网络制式</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">产品特点</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">热销机型</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">售后维修</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="right_box right"></div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <b>
+                            <i class="icon m2"></i>
+                            <a href="#">手机通讯</a>
+                            <s class="fr">></s>
+                        </b>
+                        <span>
+                            <a href="">5G手机</a>
+                            <a href="">三星 Note 10+</a>
+                            <a href="">华为 P30</a>
+                            <a href="">华为 Mate 20</a>
+                            <a href="">iPhone XR</a>
+                        </span>
+                    </dt>
+                    <dd>
+                        <div class="left">
+                            <div class="nav-menu-item">
+                                <h4 class="orange">生活周边</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">智能电器</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">电视/盒子</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">智能安防</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">智能健康</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="right_box right"></div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <b>
+                            <i class="icon m2"></i>
+                            <a href="#">手机通讯</a>
+                            <s class="fr">></s>
+                        </b>
+                        <span>
+                            <a href="">5G手机</a>
+                            <a href="">三星 Note 10+</a>
+                            <a href="">华为 P30</a>
+                            <a href="">华为 Mate 20</a>
+                            <a href="">iPhone XR</a>
+                        </span>
+                    </dt>
+                    <dd>
+                        <div class="left">
+                            <div class="nav-menu-item">
+                                <h4 class="orange">智能手表</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">智能手环</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">儿童手表</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">智能车载</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="right_box right"></div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <b>
+                            <i class="icon m2"></i>
+                            <a href="#">手机通讯</a>
+                            <s class="fr">></s>
+                        </b>
+                        <span>
+                            <a href="">5G手机</a>
+                            <a href="">三星 Note 10+</a>
+                            <a href="">华为 P30</a>
+                            <a href="">华为 Mate 20</a>
+                            <a href="">iPhone XR</a>
+                        </span>
+                    </dt>
+                    <dd>
+                        <div class="left">
+                            <div class="nav-menu-item">
+                                <h4 class="orange">保护膜</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">保护壳</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">数据线</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">充电器</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">移动电源</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">手机耳机</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">手机周边</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="right_box right"></div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <b>
+                            <i class="icon m2"></i>
+                            <a href="#">手机通讯</a>
+                            <s class="fr">></s>
+                        </b>
+                        <span>
+                            <a href="">5G手机</a>
+                            <a href="">三星 Note 10+</a>
+                            <a href="">华为 P30</a>
+                            <a href="">华为 Mate 20</a>
+                            <a href="">iPhone XR</a>
+                        </span>
+                    </dt>
+                    <dd>
+                        <div class="left">
+                            <div class="nav-menu-item">
+                                <h4 class="orange">电脑</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">平板电脑</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">外设产品</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">网络产品</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">办公设备</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">服务产品</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="right_box right"></div>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>
+                        <b>
+                            <i class="icon m2"></i>
+                            <a href="#">手机通讯</a>
+                            <s class="fr">></s>
+                        </b>
+                        <span>
+                            <a href="">5G手机</a>
+                            <a href="">三星 Note 10+</a>
+                            <a href="">华为 P30</a>
+                            <a href="">华为 Mate 20</a>
+                            <a href="">iPhone XR</a>
+                        </span>
+                    </dt>
+                    <dd>
+                        <div class="left">
+                            <div class="nav-menu-item">
+                                <h4 class="orange">热门品牌</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">耳机耳麦</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">音箱/音响</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">无人机</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">儿童专区</h4>
+                                <p></p>
+                            </div>
+                            <div class="nav-menu-item">
+                                <h4 class="orange">数码产品</h4>
+                                <p></p>
+                            </div>
+                        </div>
+                        <div class="right_box right"></div>
+                    </dd>
+                </dl>
+            </div>
+            <div class="nav absolute" style="margin-left:220px;">
+                    <a href="https://www.9ji.com">首页</a>
+                    <div id="div-bdxh" class="left" style="display:none">
+                        <a href="/shoplist/2-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-1.html">本店现货<i
+                                style="display:block;width:28px;height:14px;line-height:12px;text-align:center;background:#c80f1e;font-size:12px;position:absolute;top:-5px;right:5px;text-shadow:none;color:#fff;">hot<s
+                                    style="position: absolute;left:0;bottom:-4px;width:0;height:0;border-top:5px solid #c80f1e;border-right:5px solid transparent;"></s></i></a>
+                    </div>
+                    <a href="//huishou.9ji.com" target="_blank" rel="nofollow">旧机回收</a>
+                    <a href="/bargain/" target="_blank" rel="nofollow">一手优品</a>
+                    <a href="//huishou.9ji.com/NewLpList" target="_blank">二手良品</a>
+                    <div class="left sub_nav">
+                        <a href="/after-service" target="_blank" class="navsh" rel="nofollow">售后维修</a>
+                        <div>
+                            <a target="_blank" href="/article?cid=21">售后资讯</a>
+                        </div>
+                    </div>
+                    <a href="/article" target="_blank" class="navzx">九机头条</a>
+                    <div class="left sub_nav">
+                        <a href="/ranks.html">人气排行</a>
+                    </div>
+                    <div class="left sub_nav">
+                        <a title="九机小店" href="/join/little-shop.aspx" target="_blank">九机小店</a>
+                    </div>
+                </div>
+        </div>
+       
+    </div>
+    <script src="../js/dd9ji.js"></script>
+    <script src="../js/dd9ji2.js"></script>
+</body>
+
+</html>

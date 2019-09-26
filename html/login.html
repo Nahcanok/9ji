@@ -1,12 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/jquery-3.4.1.js"></script>
 </head>
+
 <body>
-    
+    <div class="app">
+        <div class="view">
+            <div class="wrapper login-header flex flex-align-center">
+                <a href="http://127.0.0.1/9jiji/9ji/html/">
+                    <img src="../img/logo.png" width="100" height="50">
+                </a>
+                <div class="login-welcome">欢迎登录</div>
+            </div>
+            <div class="login-content"
+                style="background:#000 url('https://img2.ch999img.com/newstatic/944/47a86aac72ed10.jpg') no-repeat center top">
+                <div class="wrapper relative">
+                    <div class="login-box">
+                        <div class="white-bg full-width full-height">
+                            <div class="login-title flex flex-align-center flex-justify-between border-bottom">
+                                <a href="">扫码登录</a>
+                                <i></i>
+                                <a class="cur" href="">账户登录</a>
+                            </div>
+                            <div class="login">
+                                <div class="login-item flex flex-align-center">
+                                    <div class="item-icon">
+                                        <svg aria-hidden="true" width="16.8" height="19.2" viewBox="0 0 448 512"
+                                            class="grey-9 fa-icon">
+                                            <path
+                                                d="M313.6 304c74.2 0 134.4 60.2 134.4 134.4v25.6c0 26.5-21.5 48-48 48h-352c-26.5 0-48-21.5-48-48v-25.6c0-74.2 60.2-134.4 134.4-134.4 28.8 0 42.5 16 89.6 16s60.9-16 89.6-16zM400 464v-25.6c0-47.6-38.8-86.4-86.4-86.4-14.7 0-37.9 16-89.6 16-51.3 0-75-16-89.6-16-47.6 0-86.4 38.8-86.4 86.4v25.6h352zM224 288c-79.5 0-144-64.5-144-144s64.5-144 144-144 144 64.5 144 144-64.5 144-144 144zM224 48c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <input id="username-ID" type="text" placeholder="用户名/手机号" value=""
+                                        class="login-input flex-child-grow">
+                                </div>
+                                <div class="login-item flex flex-align-center">
+                                    <div class="item-icon">
+                                        <svg aria-hidden="true" width="16.8" height="19.2" viewBox="0 0 448 512"
+                                            class="grey-9 fa-icon">
+                                            <path
+                                                d="M400 256c26.5 0 48 21.5 48 48v160c0 26.5-21.5 48-48 48h-352c-26.5 0-48-21.5-48-48v-160c0-26.5 21.5-48 48-48h24v-102.5c0-84 67.5-153.2 151.5-153.5s152.5 68 152.5 152v16c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24v-16c0-39.9-32.7-72.4-72.7-72-39.6 0.4-71.3 33.3-71.3 72.9v103.1h248zM264 408v-48c0-22.1-17.9-40-40-40s-40 17.9-40 40v48c0 22.1 17.9 40 40 40s40-17.9 40-40z">
+                                            </path>
+                                        </svg>
+                                    </div>
+                                    <input id="password-ID" type="password" placeholder="密码" value=""
+                                        class="login-input flex-child-grow">
+                                </div>
+                                <div class="flex flex-align-center flex-justify-between" style="margin-top:16px;"
+                                    data-v-5a67d364="">
+                                    <a href="javascript:;" class="flex flex-center" data-v-5a67d364="">
+                                        <i class="mr-5" data-v-5a67d364=""><svg data-v-5a67d364=""
+                                                viewBox="64 64 896 896" data-icon="mobile" width="1em" height="1em"
+                                                fill="currentColor" aria-hidden="true" class="">
+                                                <path
+                                                    d="M744 62H280c-35.3 0-64 28.7-64 64v768c0 35.3 28.7 64 64 64h464c35.3 0 64-28.7 64-64V126c0-35.3-28.7-64-64-64zm-8 824H288V134h448v752zM472 784a40 40 0 1 0 80 0 40 40 0 1 0-80 0z">
+                                                </path>
+                                            </svg></i> 短信验证码登录
+                                    </a>
+                                    <a target="_top" href="/acount/findpwd.aspx" data-v-5a67d364="">找回密码</a></div>
+                            </div>
+                            <a href="" class="login-button flex flex-center grey-d-bg" data-v-5a67d364=""><span
+                                    class="white" data-v-5a67d364="">登 录</span></a>
+                            <div>
+                                <a slot="right" target="_top" href="/9jiji/9ji/html/reg.html" class="flex flex-center margin-bottom" data-v-5a67d364=""><span data-v-5a67d364="">立即注册</span><svg aria-hidden="true" width="16" height="16" viewBox="0 0 512 512" focusable="false" class="ml-5 grey-6 fa-icon" data-v-5a67d364=""><path d="M256 8c137 0 248 111 248 248s-111 248-248 248-248-111-248-248 111-248 248-248zM369.9 239l-135.5-135.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9l101.6 101.6-101.6 101.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0l135.5-135.5c9.4-9.4 9.4-24.6 0-34z"></path></svg></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/login.js"></script>
 </body>
+
 </html>

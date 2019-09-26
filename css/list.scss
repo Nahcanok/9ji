@@ -1,0 +1,48 @@
+.box-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .item {
+        width: 200px;
+        margin: 7px;
+        padding: 10px;
+        height: 300px;
+        border: 3px solid transparent;
+        transition: all .3s;
+        position: relative;
+        margin: 0 auto;
+
+        &:hover {
+            border-color: #dfdfdf;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .price {
+            color: #f21c1c;
+            font-weight: 1000;
+            font-size: 14px;
+        }
+
+        .title {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+        }
+        .dis{
+            color: #9c9c9c;
+        }
+    }
+}
+
+#page {
+    text-align: center;
+    a {
+        border: 1px solid red;
+        border-radius: 50%;
+    }
+}

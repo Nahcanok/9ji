@@ -28,8 +28,7 @@ td {
     margin: 0;
     padding: 0
 }
-
-.block{
+.on{
     display: block;
 }
 body,
@@ -326,7 +325,7 @@ a.light-purple {
 .close {
     display: block;
     cursor: pointer;
-    background: url(../images/icon.png?t=10) no-repeat 0 -36px;
+    background: url(../img/icon.png?t=10) no-repeat 0 -36px;
     width: 16px;
     height: 16px;
     transition: -webkit-transform .3s;
@@ -1999,24 +1998,6 @@ html #layui_layer_skinlayercss {
     z-index: 97
 }
 
-.top-weizhi {
-    line-height: 30px;
-    color: #6b6b6b;
-    overflow: hidden;
-}
-
-.top-weizhi a {
-    display: block;
-}
-
-.top-weizhi i {
-    width: 14px;
-    height: 30px;
-    background: url(/static/images/weizhi.png) no-repeat center;
-    float: left;
-    margin-right: 6px;
-}
-
 .top-login {
     line-height: 30px;
     color: #6b6b6b;
@@ -3532,7 +3513,7 @@ html #layui_layer_skinlayercss {
     display: inline-block;
     width: 130px;
     height: 50px;
-    background: url(https://img2.ch999img.com/static/images/bot_link.jpg) no-repeat;
+    background: url(../img/bot_link.jpg) no-repeat;
     border: solid 1px #eee;
     border-radius: 3px;
     margin: 0 5px;
@@ -3544,7 +3525,7 @@ html #layui_layer_skinlayercss {
 }
 
 .bot-link a.wangjian {
-    background-image: url('//img2.ch999img.com//pic/topic/2018071814373837.png')
+    background-image: url(../img/bot_link.jpg)
 }
 
 .bot-link a.wangjing {
@@ -4769,7 +4750,9 @@ i.list_tag.left-position {
     bottom: -6px;
     background-color: #fff;
     border: 1px solid #f63;
-    display: none\9;
+    display
+    /*\**/
+    : none\9;
     border-width: 0 1px 1px 0;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
