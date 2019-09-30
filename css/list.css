@@ -40,6 +40,17 @@
   color: #9c9c9c;
 }
 
+.cart-btn {
+  width: 150px;
+  height: 50px;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  background: red;
+  color: white;
+  margin-top: 10px;
+}
+
 #page {
   text-align: center;
 }
@@ -47,4 +58,24 @@
 #page a {
   border: 1px solid red;
   border-radius: 50%;
+}
+
+.nav-menu {
+  display: none;
+  transition: 1s;
+}
+
+.nav-menu-cursor {
+  background: #f21c1c;
+}
+
+.nav-menu-cursor:hover + .nav-menu {
+  display: block;
+}
+
+.preview-box {
+  margin-bottom: 1vh;
+  width: 438px;
+  height: 438px;
+  position: relative;
 }

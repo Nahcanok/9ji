@@ -29,3 +29,19 @@ $(".top-telephone").hover(function(){
     $(".top-free-phone").css("display","none");
     $(".top-telephone").removeClass("cur");
 })
+$(function(){
+    var queryString = decodeURI(window.location.search.slice(8));
+    console.log(queryString);
+$.ajax({
+    type: "post",
+    url: "../server/loginbar.php",
+    data: `userid=${queryString*1}`,
+    dataType: "json",
+    success: function (response) {
+        data = response.data[0];
+        username = data.username;
+        $(".top-login a").eq(0).text(username);
+        $(".top-login a").eq(0).after('<a href="../html/index.html">注销</a>')
+    }, 
+});
+})

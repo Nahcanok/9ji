@@ -9,7 +9,8 @@ $(function(){
             success:function(response){
                 if(response.status=="success"){
                     alert(response.data.msg)
-                    window.location.href = "../html/index.html"
+                    let id = (response.userid)
+                    window.location.href = "../html/index.html?"+"userid="+id;
                 }else{
                     alert(response.data.msg)
                 }

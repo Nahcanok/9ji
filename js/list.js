@@ -39,16 +39,16 @@ $(function () {
             dataType: "json",
             success: function (response) {
                 let data = response.data;
-                console.log(data);
-
                 let html = data.map((ele) => {
                     return `
-          <li class="item">
+          <li class="item" id="${ele.id}">
               <div class="item-box">
-                  <img src=${ele.src}>
+              <a href="http://127.0.0.1/9jiji/9ji/html/list_etails.html"> 
+              <img src=${ele.src}>
                   <div class="price">￥${ele.price}</div>
                   <div class="title">${ele.title}</div>
                   <div class="dis">${ele.dis}</div>
+              </a>
               </div>
           </li>
           `
@@ -66,5 +66,10 @@ $(function () {
         currentType = index;
         getDatWithPage(currentType, 0);
         $("#page").children("a").first().addClass("active").siblings().removeClass("active");
+    })
+    $(".box-list").on("click","li",function(e){
+        e.preventDefault();
+        let id=$(this).attr("id");
+        window.location.href="http://127.0.0.1/9jiji/9ji/html/list_etails.html?"+"id="+id;
     })
 });

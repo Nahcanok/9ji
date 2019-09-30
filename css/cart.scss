@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.cart-box{
+    width: 800px;
+    height: 500px;
+    border: 1px solid red;
+    margin: 0 auto;
+    ul{
+        width: 100%;
+        height: 50px;
+        background: #ccc;
+        li{
+            float: left;
+            width: 110px;
+            height: 100%;
+            text-align: center;
+            
+            line-height: 50px;
+            padding: 2px;
+        }
+    }
+    .cart-main{
+        width: 100%;
+        .cart-list{
+            background: pink;
+            width: 100%;
+            img{
+                width: 114px;
+                height: 54px;
+            }
+            input{
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+}

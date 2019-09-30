@@ -28,7 +28,9 @@ $db = mysqli_connect("127.0.0.1","root","","9ji");
 for($i = 0;$i<count($arrData);$i++)
 {
   $src = $arrData[$i]["src"];
-  $sql = "INSERT INTO `floor-title` (`id`, `src`) 
+  $h3Text=$arrData[$i]["h3Text"];
+  $pText=$arrData[$i][""]
+  $sql = "INSERT INTO `floor-main` (`id`, `src`) 
 VALUES (NULL, '$src');";
   mysqli_query($db, $sql);
 }
