@@ -6,12 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="../js/jquery-3.4.1.js"></script>
     <title>Document</title>
 </head>
 
 <body>
+    <div class="top"></div>
+    <div class="Main"></div>
     <div class="cart-box">
-        <ul>
+        <ul class="box-heard">
             <li>状态</li>
             <li>图片</li>
             <li>商品</li>
@@ -22,7 +26,7 @@
         </ul>
         <div class="cart-main">
             <!-- <ul class="cart-list">
-                <li><input type="checkbox"></li>
+                <li><input class="checkbox-class" type="checkbox"}></li>
                 <li><img src="../img/logo.png" alt=""></li>
                 <li><span>yyy</span></li>
                 <li><span>￥200</span></li>
@@ -31,11 +35,20 @@
                 <li><a href="">删除</a></li>
             </ul> -->
         </div>
-        <div class="footer">
+        <div class="carfooter">
             <span class="left"><input type="checkbox" id="allSelector" checked></span> 全选
-            <span class="right">总计</span>
+            <span class="carright">总计</span>
         </div>
     </div>
+    <div class="footer"></div>
+    <script>
+            $(".top").load("http://127.0.0.1/9jiji/9ji/html/loginbar.html");
+            $(".Main").load("http://127.0.0.1/9jiji/9ji/html/header1.html");
+            $(".footer").load("http://127.0.0.1/9jiji/9ji/html/footer.html");
+            $(".footer").before("<div class=\"tool-bar flex flex-align-center\" style=\"width:35px\">");
+            $(".tool-bar").load("http://127.0.0.1/9jiji/9ji/html/ce.html")
+        </script>
+    <script src="../js/cart.js"></script>
 </body>
 
 </html>

@@ -488,6 +488,11 @@
   float: left;
 }
 
+.diy-floor .leftAD img {
+  width: 190px;
+  height: 290px;
+}
+
 .diy-floor .textAD {
   line-height: 34px;
   position: absolute;
